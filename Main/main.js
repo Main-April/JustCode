@@ -13,12 +13,6 @@ function select(s) {
     return document.querySelector(s)
 }
 
-// Record all under-element of an element and declare a var with her
-function DOMregister(){
-    document.querySelectorAll("*").forEach((e)=>{
-        globalThis[(e.id||e.classList[0]||e.tagName||e.type).toLowerCase()]=e;
-    })
-}
 
 function css(e, s, v = undefined) {
     if (type(e) === "string") e = select(e);
@@ -41,5 +35,6 @@ function type(e, t) {
     return e === t.toLowerCase();
 
 }
+
 
 
