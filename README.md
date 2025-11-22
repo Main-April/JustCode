@@ -1,6 +1,6 @@
-# Nanotypes.js
+# Just ... Code !
 
-A lightweight JavaScript library designed to simplify web development without Node.js or Python dependencies. You can personnalize your experience using the differents files how you want. 
+Just Code is a JavaScript library created to accelerate the development of all kinds of websites.
 
 ## Installation
 
@@ -11,7 +11,7 @@ Include these script tags in your HTML file:
 <script src="https://raw.githack.com/Main-April/Nanotypes.js/main/installer.js"></script>
 ```
 Installer File automatically import all file in the Main folder.
-You can use the plugin with the function importFile(String filename)
+You can use the plugin with the function importFile(String filename) 
 
 ### Complete Setup Example
 ```html
@@ -22,31 +22,22 @@ You can use the plugin with the function importFile(String filename)
 </head>
 <body>
     <!-- Your content -->
-   <script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/Main/main.js"></script>
+   <script src="https://raw.githubusercontent.com/Main-April/Nanotypes.js/refs/heads/main/installer.js"></script>
 </body>
 </html>
 ```
 
 ## Usage
 
-### Basic Syntax
+### DOM Utilisation
 
-You can use the select function to.
-Select elements using the `_()` function, like $ Jquey syntax :
+You can use the select function to select elements using `select(String s)` function, like $ Jquery syntax :
 
 ```javascript
-// Select by ID
-_('myButton')
-// Or ...
-_('#myButton')
+// If you have an element like this :
+// <button>send</button>
+select("button").onclick = alert("Button clicked !")
 
-// Select by class name
-_('my-class')
-// Or ...
-_('.my-class') 
-
-// Select by HTML tag
-_('div')
 ```
 
 ### Method Chaining
