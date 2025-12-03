@@ -5,12 +5,19 @@
 // Interacting DOM functions : 
 
 // A quick selection of an element
-function select(s) {
+class Element{
+    constructor(el){
+        if(!el) this.element = select(el);
+        this.element.attributes.forEach((attr,value)=>{
+            this.element[attr] = value;
+        })
+    select(s) {
     let i = document.getElementById(s);
     let c = document.getElementsByClassName(s)
     if (i) return i;
     if (c && c.length > 0) return c;
     return document.querySelector(s)
+    }
 }
 
 function addElement(t,c){
@@ -27,6 +34,7 @@ function css(e, s, v = undefined) {
     e.style[s] = v;
 }
 
+
 // Global JS functions
 
 function repeat(n, c) {
@@ -41,6 +49,7 @@ function type(e, t) {
     if (!t) return e;
     return e === t.toLowerCase();
 }
+
 
 
 
